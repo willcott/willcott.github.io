@@ -1,0 +1,113 @@
+:root {
+    --translation: translate(-50%, -50%);
+    --x-pos: 50%;
+    --y-pos: 50%;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to right, #ff7e5f 0%, #feb47b 100%);
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    overflow: hidden;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+.heading {
+    width: 50%;
+    position: absolute;
+    top: var(--y-pos);
+    left: var(--x-pos);
+    transform: var(--translation);
+    text-align: center;
+
+    font-size: 4em;
+    text-shadow: 4px 6px 1px black;
+
+    transition: 0.2s;
+
+
+}
+
+h1 {
+    animation: 1s ease-out 0s 1 pop;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+
+}
+
+a {
+    color: inherit;
+}
+
+.item {
+    width: auto;
+    transition: 1s;
+    position: absolute;
+}
+
+.item:hover {
+    font-size: 2em;
+
+}
+
+.popup {
+    opacity: 0;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 16px;
+
+    transition: 1s;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: none;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.0);
+        text-shadow: 1px 1px 1px black;
+
+    }
+
+    10% {
+        transform: scale(0.1);
+
+    }
+
+    50% {
+        transform: scale(1.1);
+        text-shadow: 6px 6px 10px black;
+    }
+
+    100% {
+        transform: scale(1);
+        text-shadow: 4px 6px 1px black;
+
+    }
+}
