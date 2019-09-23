@@ -1,16 +1,71 @@
 <html>
-
-<head>
+  <head>
     <title>Will Cottingham</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-</head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <h1>Will Cottingham</h1>
-</body>
+  <body>
+    <h1>
+      Will Cottingham
+      <h2>Software Development, Sound Design, and Audio Production</h2>
+    </h1>
 
+    <script src="index.js"></script>
 
-<script type="text/javascript" src="scripts/script.js"></script>
+    <div class="nav">
+      <div class="nav-item" id="projects">Projects</div>
 
+      <div class="nav-item" onClick="clickedAbout()" id="about">About</div>
+
+      <div class="nav-item" onClick="clickedContact()" id="contact">Contact</div>
+    </div>
+
+    <div class="contents" id="contact-contents">
+      <div class="list">
+        <div class="list-item" onClick="clickedEmail()" id="email">
+          Email
+        </div>
+
+        <div class="list-item">
+          <a href="https://github.com/willcott">GitHub</a>
+        </div>
+
+        <div class="list-item">
+          <a href="https://www.linkedin.com/in/will-cottingham-82b278193/"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="contents" id="about-contents">
+      <p>
+        a software dev with an interest in all things audio
+        <br>
+        based in manc, uk
+      </p>
+    </div>
+
+    <div class="contents" id="contact-contents">
+      <div class="list">
+        <div class="list-item" onClick="clickedEmail()" id="email">
+          Email
+        </div>
+
+        <div class="list-item">
+          <a href="https://github.com/willcott">GitHub</a>
+        </div>
+
+        <div class="list-item">
+          <a href="https://www.linkedin.com/in/will-cottingham-82b278193/"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
