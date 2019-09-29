@@ -11,23 +11,23 @@ h1{
 }
 
 h2{
-    font-size: 1em;
+    font-size: 1.5em;
     margin-bottom: 40px;
 }
 
 .nav-item{
-    font-size: 4em;
+    font-size: 2em;
     padding: 5px;
     cursor: pointer;
     text-decoration: underline;
     transition: 0.5s;
 }
 
+
 .contents{
     margin-top: 40px;
     font-size: 3em;
     width: 100%;
-    display: none;
       
 }
 
@@ -40,7 +40,6 @@ h2{
 
 .list-item a{
     color: black;
-    
 }
 
 .contents p{

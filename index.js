@@ -31,25 +31,3 @@ function clickedEmail() {
     clicked = false;
   }, 4000);
 }
-
-function clickedContact() {
-  changeMenu();
-  document.getElementById("contact").style.fontSize = "3em";
-  document.getElementById("contact-contents").style.display = "block";
-  document.getElementById("about-contents").style.display = "none";
-}
-
-function clickedAbout() {
-  changeMenu();
-  document.getElementById("about").style.fontSize = "3em";
-  document.getElementById("about-contents").style.display = "block";
-  document.getElementById("contact-contents").style.display = "none";
-}
-
-function changeMenu() {
-  var all = document.getElementsByClassName("nav-item");
-
-  for (var i = 0; i < all.length; i++) {
-    all[i].style.fontSize = "2em";
-  }
-}
