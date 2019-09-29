@@ -1,32 +1,51 @@
 <html>
-
-<head>
+  <head>
     <title>Will Cottingham</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-</head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
+  <body>
+    <h1>
+      will cottingham
+      <h2>software development, sound design, and audio production</h2>
+    </h1>
 
-
-    <div class="heading">
-        <h1 id="title" unselectable="on">Coming Soon...</h1>
+    <script src="index.js"></script>
+      
     </div>
 
+    
 
-    <div class="item" style="top: 20px; left:20px;" onmouseenter="disclude()" onmouseleave="include()">
-        <h2 id="email"><a href="#" onclick="copy()" style="text-decoration:none;">william.h.cottingham@gmail.com</a></h2>
+    <div class="contents" id="about-contents">
+      <p>
+        a software dev with an interest in all things audio
+        <br />
+        based in manc, uk
+      </p>
     </div>
 
-    <div class="item" style="bottom: 20px; right:20px;" onmouseenter="disclude()" onmouseleave="include()">
-        <h2><a href="http://bit.ly/willcottingham" style="text-decoration:none;">Click here for current website</a></h2>
+    <div class="contents" id="contact-contents">
+      <div class="list">
+        <div class="list-item" onClick="clickedEmail()" id="email">
+          email
+        </div>
+
+        <div class="list-item">
+          <a href="https://github.com/willcott">github</a>
+        </div>
+
+        <div class="list-item">
+          <a href="https://www.linkedin.com/in/will-cottingham-82b278193/"
+            >linkedin</a
+          >
+        </div>
+      </div>
     </div>
 
-    <div class="popup" id="popup">Copied text to Clipboard</div>
-
-
-
-</body>
-<script type="text/javascript" src="scripts/script.js"></script>
-
+  </body>
 </html>
