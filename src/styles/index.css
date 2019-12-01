@@ -1,0 +1,143 @@
+body {
+  padding-top: 0px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 40px;
+}
+
+.header {
+  position: absolute;
+  padding: 0px;
+}
+
+.nav {
+  font-size: 2em;
+}
+
+.contents {
+  font-size: 2em;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#projMenu-contents .center {
+  top: 80%;
+}
+
+.project-item-container img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-item-container .title {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.project-item-container {
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  max-width: 600px;
+}
+
+.li {
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.li p {
+  transition: 1s;
+}
+
+i {
+  font-size: 24px;
+}
+
+.contents .li {
+  text-decoration: underline;
+}
+
+.li a {
+  color: black;
+}
+
+.contents p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* landscape tablet breakpoint */
+@media all and (max-width: 1200px) {
+}
+
+/* tablet breakpoint */
+@media all and (max-width: 900px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .contents {
+    position: relative;
+    height: 200px;
+  }
+
+  .center {
+    position: relative;
+    top: 0;
+    left: 0;
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .project-item-container {
+    margin: auto;
+  }
+
+  #projMenu-contents .center {
+    top: 0;
+  }
+}
+
+/* mobile breakpoint */
+@media all and (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  body {
+    padding-top: 20px;
+  }
+  .project-item-container {
+    font-size: 0.75em;
+  }
+}

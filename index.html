@@ -1,51 +1,85 @@
 <html>
   <head>
     <title>Will Cottingham</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
-    <h1>
-      will cottingham
-      <h2>software development, sound design, and audio production</h2>
-    </h1>
+    <div class="header">
+      <h1>
+        will cottingham
+        <h2>software development, sound design, and audio production</h2>
+      </h1>
 
-    <script src="index.js"></script>
-      
-    </div>
-
-    
-
-    <div class="contents" id="about-contents">
-      <p>
-        a software dev with an interest in all things audio
-        <br />
-        based in manc, uk
-      </p>
-    </div>
-
-    <div class="contents" id="contact-contents">
-      <div class="list">
-        <div class="list-item" onClick="clickedEmail()" id="email">
-          email
+      <div class="nav">
+        <div class="li" id="contact" onClick="clickHandler('contact')">
+          contact
         </div>
-
-        <div class="list-item">
-          <a href="https://github.com/willcott">github</a>
+        <div class="li" id="about" onClick="clickHandler('about')">
+          about
         </div>
-
-        <div class="list-item">
-          <a href="https://www.linkedin.com/in/will-cottingham-82b278193/"
-            >linkedin</a
-          >
+        <div class="li" id="projects" onClick="clickHandler('projects')">
+          projects
         </div>
       </div>
     </div>
 
+    <script src="src/scripts/copyHandler.js"></script>
+
+    <div class="contents" id="contact-contents" style="display: none;">
+      <div class="center">
+        <div class="list">
+          <div class="li">
+            <i class="fa fa-envelope" onClick="copyHandler('email')"></i>
+            <p onClick="copyHandler('email')" id="email">email</p>
+          </div>
+
+          <div class="li">
+            <a href="https://github.com/willcott" target="_blank">
+              <i class="fa fa-github"></i>
+              <p>github</p></a
+            >
+          </div>
+
+          <div class="li">
+            <a
+              href="https://www.linkedin.com/in/will-cottingham-82b278193/"
+              target="_blank"
+              ><i class="fa fa-linkedin"></i>
+              <p>linkedin</p></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contents" id="about-contents" style="display: none;">
+      <div class="center">
+        <p>
+          a software dev with an interest in all things audio
+          <br />
+          based in manc, uk
+        </p>
+      </div>
+    </div>
+
+    <div class="contents" id="projMenu-contents" style="display: none;">
+      <div class="center">
+        <div id="project-container"></div>
+      </div>
+    </div>
+
+    <script src="src/scripts/projectMenuController.js"></script>
+
+    <script src="src/scripts/indexController.js"></script>
   </body>
 </html>
