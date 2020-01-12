@@ -11,10 +11,9 @@ const { projects } = {
         "https://i.imgur.com/7mJaQXI.png",
         "https://i.imgur.com/0ppcnf3.png"
       ],
-      videoEmbed:
-        '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QT-S2eFDJAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      videoId: "QT-S2eFDJAI",
       body:
-        "Birdies is an application to help users escape the noise of modern life. The interface includes a landscape with multicoloured birds flying across. When you tap on one, the bird tweets a unique tune.<br>You can also fade in and out relaxing sounds such as a river flowing by and rain to create your own nature-inspired soundscape.<br>The birds that you have found are saved to the device and can be found on a page where you can tap the ones you've found to hear them tweet again.<br>There is an automatic mode that a user can enable where you can set your device to the side and use the sounds of nature to help you concentrate or relax."
+        "Birdies is an application to help users escape the noise of modern life. The interface includes a landscape with multicoloured birds flying across. When you tap on one, the bird tweets a unique tune.<br><br>You can also fade in and out relaxing sounds such as a river flowing by and rain to create your own nature-inspired soundscape.<br>The birds that you have found are saved to the device and can be found on a page where you can tap the ones you've found to hear them tweet again.<br><br>There is an automatic mode that a user can enable where you can set your device to the side and use the sounds of nature to help you concentrate or relax."
     },
     {
       title: "Architexture III",
@@ -29,6 +28,8 @@ const { projects } = {
       id: "always_be_with_you",
       imageSrc: "https://i.imgur.com/MAflyHG.jpg",
       showImage: true,
+      audioUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/721816117%3Fsecret_token%3Ds-ztsj3&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
       body:
         "This track was recorded in late November of 2017 for the band, SLTR, with engineering and production completed by myself. The track was recorded over two sessions, one session was used to record the instruments, guitars, bass, and drum kit, and the second session was used to record vocals. I then went on to mix and master the track for it to be later released on many major platforms such as Spotify, iTunes and Google Play Music."
     },
@@ -37,14 +38,15 @@ const { projects } = {
       id: "somebody_else",
       imageSrc: "https://i.imgur.com/BM8nkEM.jpg",
       showImage: true,
+      audioUrl:
+        "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/721816579%3Fsecret_token%3Ds-h3E56&color=%23050000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
       body:
         "This recording was carried out as part of the Recording Studio Techniques module during my first year of BEng Elecronics with Music Technology Systems at the University of York. I used a combination of the XY mic (Rode NT4), and a spaced pair technique using two Rode NT5s. This provided a very crisp recording of both the guitar and the vocals, with a wide stereo image. The performance space was chosen to give a subtle reverb that I thought would particularly complement a soft, calm performance."
     },
     {
       title: "Showreel",
       id: "showreel",
-      videoEmbed:
-        '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L-Mf3aNQGwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      videoId: "L-Mf3aNQGwc",
       imageSrc: "https://i.imgur.com/mYwGlqb.png"
     }
   ]

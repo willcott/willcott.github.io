@@ -2,23 +2,25 @@ const slideshow = document.getElementById("slideshow");
 const leftArrow = document.createElement("div");
 const rightArrow = document.createElement("div");
 
-leftArrow.classList= "arrow";
+leftArrow.classList = "arrow";
 rightArrow.classList = "arrow";
 
 leftArrow.innerHTML = "<";
 rightArrow.innerHTML = ">";
+leftArrow.style.zindex = "10";
+rightArrow.style.zindex = "10";
 
 let currentImg = 0;
-
-const slide = document.createElement("img");
+const slide = document.createElement("div");
 slide.classList = "slide";
 
-slideshow.appendChild(leftArrow);
+slide.appendChild(leftArrow);
 slideshow.appendChild(slide);
-slideshow.appendChild(rightArrow);
+slide.appendChild(rightArrow);
 
 const populateSlideshow = () => {
-    slide.src = project.slideshowImgs[currentImg];
+  slide.style.backgroundImage =
+    "url(" + project.slideshowImgs[currentImg] + ")";
 };
 
 const leftArrowClicked = () => {
@@ -27,22 +29,20 @@ const leftArrowClicked = () => {
   } else {
     currentImg = currentImg - 1;
   }
-  console.log(currentImg);
   populateSlideshow();
 };
 const rightArrowClicked = () => {
-    if (currentImg + 1 === project.slideshowImgs.length) {
-      currentImg = 0;
-    } else {
-      currentImg = currentImg + 1;
-    }
-    console.log(currentImg);
-    populateSlideshow();
-  };
+  if (currentImg + 1 === project.slideshowImgs.length) {
+    currentImg = 0;
+  } else {
+    currentImg = currentImg + 1;
+  }
+  populateSlideshow();
+};
 
 leftArrow.onclick = leftArrowClicked;
 rightArrow.onclick = rightArrowClicked;
 
 if (project.slideshowImgs !== undefined)
   populateSlideshow(project.slideshowImgs);
-else slideshowImgs.style.display = "none";
+else slideshow.style.display = "none";

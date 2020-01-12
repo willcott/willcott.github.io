@@ -1,37 +1,9 @@
-const { projects } = {
-  projects: [
-    {
-      title: "Birdies",
-      id: "birdies",
-      imageSrc: "https://i.imgur.com/suUehCZ.png"
-    },
-    {
-      title: "Architexture III",
-      id: "architexture_3",
-      imageSrc: "https://i.imgur.com/PWJmUMB.jpg"
-    },
-    {
-      title: "Always Be With You - SLTR (2018)",
-      id: "always_be_with_you",
-      imageSrc: "https://i.imgur.com/MAflyHG.jpg"
-    },
-    {
-      title: "Somebody Else - Stereo Recording",
-      id: "somebody_else",
-      imageSrc: "https://i.imgur.com/BM8nkEM.jpg"
-    },
-    {
-      title: "Showreel",
-      id: "showreel",
-      imageSrc: "https://i.imgur.com/mYwGlqb.png"
-    }
-  ]
-};
-
 const projContainer = document.getElementById("project-container");
 
 populate = () => {
   let count = 0;
+
+  //console.log(typeof projects);
 
   projects.forEach(item => {
     let newItem = document.createElement("a");
@@ -56,7 +28,7 @@ populate = () => {
     newItem.classList += "project-item-container";
 
     //newItem.href = "src/projects/" + item.id + ".html";
-    newItem.href = "src/projects/project.html?page=" + item.id;
+    newItem.href = "src/project/index.html?page=" + item.id;
 
     projContainer.appendChild(newItem);
 
@@ -65,3 +37,8 @@ populate = () => {
 };
 
 populate();
+
+let bottom = document.createElement("div");
+bottom.style.paddingBottom = 40;
+
+projContainer.appendChild(bottom);

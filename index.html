@@ -16,47 +16,61 @@
   <body>
     <div class="header">
       <h1>
-        will cottingham
-        <h2>software development, sound design, and audio production</h2>
+        Will Cottingham
+        <h2>Software Development, Sound Design, and Audio Production</h2>
       </h1>
 
       <div class="nav">
         <div class="li" id="contact" onClick="clickHandler('contact')">
-          contact
+          Contact
         </div>
         <div class="li" id="about" onClick="clickHandler('about')">
-          about
+          About
         </div>
         <div class="li" id="projects" onClick="clickHandler('projects')">
-          projects
+          Projects
+        </div>
+        <div class="li" id="cv" onClick="clickHandler('cv')">
+          CV
         </div>
       </div>
     </div>
+
+    <div class="contents" id="canvas-contents">
+      <div class="center">
+        <canvas id="canvas" width="600px" height="300px" onmousedown="canvasClicked(event)" onmousemove="mouseMove(event)" onmouseup="mouseUp()"></canvas>
+      </div>
+      <div class="audio-icon" id="audio-button" onclick="audioSwitcher()">
+        <i class="fa fa-volume-up" id="audio-icon"></i>
+      </div>
+    </div>
+
+    
+
+    <script src="src/scripts/canvasController.js"></script>
 
     <script src="src/scripts/copyHandler.js"></script>
 
     <div class="contents" id="contact-contents" style="display: none;">
       <div class="center">
         <div class="list">
-          <div class="li">
+          <div class="li contacts">
             <i class="fa fa-envelope" onClick="copyHandler('email')"></i>
-            <p onClick="copyHandler('email')" id="email">email</p>
+            <p onClick="copyHandler('email')" id="email">Email</p>
           </div>
 
-          <div class="li">
+          <div class="li contacts">
             <a href="https://github.com/willcott" target="_blank">
               <i class="fa fa-github"></i>
-              <p>github</p></a
-            >
+              <p>Github</p>
+              </a>
           </div>
 
-          <div class="li">
-            <a
-              href="https://www.linkedin.com/in/will-cottingham-82b278193/"
-              target="_blank"
-              ><i class="fa fa-linkedin"></i>
-              <p>linkedin</p></a
-            >
+          <div class="li contacts">
+            <a href="https://www.linkedin.com/in/will-cottingham-82b278193/" target="_blank">
+              <i class="fa fa-linkedin"></i>
+              <p>Linkedin</p>
+            </a>
           </div>
         </div>
       </div>
@@ -65,9 +79,9 @@
     <div class="contents" id="about-contents" style="display: none;">
       <div class="center">
         <p>
-          a software dev with an interest in all things audio
-          <br />
-          based in manc, uk
+          A software deveveloper with an interest in all things audio.
+          <div class="line"></div>
+          Based in Manchester, UK
         </p>
       </div>
     </div>
@@ -78,8 +92,47 @@
       </div>
     </div>
 
-    <script src="src/scripts/projectMenuController.js"></script>
+    <div class="contents" id="cv-contents" style="display: none;">
+      <div class="center">
+        <div class="cv-item">
+          <div class="left">        
+            Sep 2019 - present
+          </div>
 
+          <div class="right">
+            BBC Food
+            <br>
+            Software Engineer
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="left">        
+            Jun 2018 - Jul 2018
+          </div>
+
+          <div class="right">
+            AudioLab, University of York
+            <br>
+            Undergraduate Researcher
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="left">        
+            Sep 2016 - Jun 2019
+          </div>
+
+          <div class="right">
+            University of York
+            <br>
+            Electronic Engineering with Music Technology Systems BEng
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="src/project/projects-json.js"></script>
+    <script src="src/scripts/projectMenuController.js"></script>
     <script src="src/scripts/indexController.js"></script>
   </body>
 </html>
