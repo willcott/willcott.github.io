@@ -8,24 +8,24 @@ function copyHandler(id) {
   }
 
   clicked = true;
-  let input = document.createElement("input");
+  let input = document.createElement('input');
   body.appendChild(input);
-  input.value = "william.h.cottingham@gmail.com";
+  input.value = 'william.h.cottingham@gmail.com';
   input.select();
-  document.execCommand("copy");
+  document.execCommand('copy');
 
   body.removeChild(input);
   let oldHtml = document.getElementById(id).innerHTML;
 
-  document.getElementById(id).innerHTML = "Copied to Clipboard";
+  document.getElementById(id).innerHTML = 'Copied to Clipboard';
 
   setTimeout(function() {
-    document.getElementById(id).style.opacity = "0";
+    document.getElementById(id).style.opacity = '0';
   }, 2000);
 
   setTimeout(function() {
     document.getElementById(id).innerHTML = oldHtml;
-    document.getElementById(id).style.opacity = "1";
+    document.getElementById(id).style.opacity = '1';
   }, 3000);
 
   setTimeout(function() {
