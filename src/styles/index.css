@@ -78,7 +78,8 @@ h2 {
 .project-item-container img {
   width: 50%;
   height: 100%;
-  object-fit: contain;
+  object-fit: scale-down;
+  filter: drop-shadow(0 0 5px black);
 }
 
 .cv-item {
