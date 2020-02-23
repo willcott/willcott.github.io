@@ -1,4 +1,4 @@
-const projContainer = document.getElementById('project-container');
+const projContainer = document.getElementById("project-container");
 
 populate = () => {
   let count = 0;
@@ -6,15 +6,15 @@ populate = () => {
   //console.log(typeof projects);
 
   projects.forEach(item => {
-    let newItem = document.createElement('a');
-    let title = document.createElement('div');
-    let image = document.createElement('img');
+    let newItem = document.createElement("a");
+    let title = document.createElement("div");
+    let image = document.createElement("img");
 
     title.innerHTML = item.title;
     image.src = item.imageSrc;
 
-    title.style.display = 'inline';
-    image.style.display = 'inline';
+    title.style.display = "inline";
+    image.style.display = "inline";
 
     if (count % 2 == 0) {
       newItem.appendChild(title);
@@ -24,11 +24,11 @@ populate = () => {
       newItem.appendChild(title);
     }
 
-    title.classList += 'title';
-    newItem.classList += 'project-item-container';
+    title.classList += "title";
+    newItem.classList += "project-item-container";
 
     //newItem.href = "src/projects/" + item.id + ".html";
-    newItem.href = 'src/project/index.html?page=' + item.id;
+    newItem.href = "src/project/index.html?page=" + item.id;
 
     projContainer.appendChild(newItem);
 
@@ -38,7 +38,7 @@ populate = () => {
 
 populate();
 
-let bottom = document.createElement('div');
+let bottom = document.createElement("div");
 bottom.style.paddingBottom = 40;
 
 projContainer.appendChild(bottom);
