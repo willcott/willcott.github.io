@@ -28,7 +28,7 @@ populate = () => {
     newItem.classList += "project-item-container";
 
     //newItem.href = "src/projects/" + item.id + ".html";
-    newItem.href = "src/project/index.html?page=" + item.id;
+    newItem.href = "https://willcott.github.io/project?page=" + item.id;
 
     projContainer.appendChild(newItem);
 
