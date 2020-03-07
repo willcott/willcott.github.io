@@ -12,9 +12,6 @@ muteNode.gain.setValueAtTime(1, audioCtx.currentTime);
 const nodes = [];
 let text;
 setTimeout(() => {
-  console.log(!everClicked && canvas.width > 900);
-  console.log(everClicked);
-  console.log(canvas.width > 900);
   if (!everClicked && canvas.width > 900) {
     text = document.createElement("p");
     text.classList = "animated-text";
