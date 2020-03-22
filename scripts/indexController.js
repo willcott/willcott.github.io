@@ -9,6 +9,8 @@ const contactButton = document.getElementById("contact");
 const projMenuButton = document.getElementById("projects");
 const cvButton = document.getElementById("cv");
 
+const header = document.getElementById("header");
+
 function clickHandler(id) {
   everClicked = true;
   if (id == "about") {
@@ -16,6 +18,7 @@ function clickHandler(id) {
     contactButton.style.textDecoration = "none";
     projMenuButton.style.textDecoration = "none";
     cvButton.style.textDecoration = "none";
+    header.style.zIndex = "0";
 
     about.style.display = "block";
     contact.style.display = "none";
@@ -29,6 +32,7 @@ function clickHandler(id) {
     aboutButton.style.textDecoration = "none";
     projMenuButton.style.textDecoration = "none";
     cvButton.style.textDecoration = "none";
+    header.style.zIndex = "0";
 
     contact.style.display = "block";
     about.style.display = "none";
@@ -41,6 +45,7 @@ function clickHandler(id) {
     aboutButton.style.textDecoration = "none";
     contactButton.style.textDecoration = "none";
     cvButton.style.textDecoration = "none";
+    header.style.zIndex = "0";
 
     projMenu.style.display = "block";
     about.style.display = "none";
@@ -53,6 +58,7 @@ function clickHandler(id) {
     aboutButton.style.textDecoration = "none";
     contactButton.style.textDecoration = "none";
     projMenuButton.style.textDecoration = "none";
+    header.style.zIndex = "0";
 
     cvContents.style.display = "block";
     about.style.display = "none";

@@ -249,6 +249,7 @@ i {
   .contents {
     position: relative;
     height: 200px;
+    margin: 20px;
   }
 
   .center {
