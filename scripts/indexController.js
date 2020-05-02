@@ -14,6 +14,7 @@ const header = document.getElementById("header");
 function clickHandler(id) {
   everClicked = true;
   if (id == "about") {
+    window.history.replaceState(null, null, window.location.pathname);
     aboutButton.style.textDecoration = "underline";
     contactButton.style.textDecoration = "none";
     projMenuButton.style.textDecoration = "none";
@@ -28,6 +29,7 @@ function clickHandler(id) {
   }
 
   if (id == "contact") {
+    window.history.replaceState(null, null, window.location.pathname);
     contactButton.style.textDecoration = "underline";
     aboutButton.style.textDecoration = "none";
     projMenuButton.style.textDecoration = "none";
@@ -41,6 +43,7 @@ function clickHandler(id) {
     cvContents.style.display = "none";
   }
   if (id == "projects") {
+    window.history.replaceState(null, null, `${window.location.pathname}?projects`);
     projMenuButton.style.textDecoration = "underline";
     aboutButton.style.textDecoration = "none";
     contactButton.style.textDecoration = "none";
@@ -54,6 +57,7 @@ function clickHandler(id) {
     cvContents.style.display = "none";
   }
   if (id == "cv") {
+    window.history.replaceState(null, null, window.location.pathname);
     cvButton.style.textDecoration = "underline";
     aboutButton.style.textDecoration = "none";
     contactButton.style.textDecoration = "none";
@@ -108,7 +112,6 @@ const audioSwitcher = () => {
 window.onload = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const param = urlParams.get("projects");
-  window.history.replaceState(null, null, window.location.pathname);
   if (param !== null) clickHandler("projects");
 
   if (window.innerWidth <= 900) canvasContents.style.display = "none";
