@@ -22,11 +22,7 @@ const { projects } = {
       ],
       videoId: "QT-S2eFDJAI",
       body:
-<<<<<<< HEAD
-        "Birdies is an application to help users escape the noise of modern life. The interface includes a landscape with multicoloured birds flying across. When you tap on one, the bird tweets a unique tune.<br><br>You can also fade in and out relaxing sounds such as a river flowing by and rain to create your own nature-inspired soundscape.<br>The birds that you have found are saved to the device and can be found on a page where you can tap the ones you've found to hear them tweet again.<br><br>There is an automatic mode that a user can enable where you can set your device to the side and use the sounds of nature to help you concentrate or relax.",
-=======
         "Birdies is an application to help users escape the noise of modern life. The interface includes a landscape with multicoloured birds flying across. When you tap on one, the bird tweets a unique tune.<br><br>You can also fade in and out relaxing sounds such as a river flowing by and rain to create your own nature-inspired soundscape.<br><br>The birds that you have found are saved to the device and can be found on a page where you can tap the ones you've found to hear them tweet again.<br><br>There is an automatic mode that a user can enable where you can set your device to the side and use the sounds of nature to help you concentrate or relax."
->>>>>>> 420a87bd615feffa28b815f5280e82d138c09173
     },
     {
       title: "Architexture III",
