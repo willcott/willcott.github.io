@@ -1,0 +1,60 @@
+.waveform {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 200px;
+  position: relative;
+
+
+  .waveform__bar {
+    margin-left: 5px;
+    min-width: 10px;
+    height: var(--max-height);
+    background-color: var(--secondary);
+    box-shadow: 2px 2px var(--primary);
+    
+    animation-name: oscilate;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    @media (max-width: 600px) {
+      animation-name: none;
+    }
+  }
+}
+
+@keyframes oscilate {
+  0% {
+    height: var(--min-height);
+  }
+  50% {
+    height: var(--max-height);
+  }
+  100% {
+    height: var(--min-height);
+  }
+}
+
+.second-waveform {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 200px;
+
+  .waveform__bar {
+    margin-left: 5px;
+    min-width: 10px;
+    height: var(--max-height);
+    background-color: var(--secondary);
+    animation-name: oscilate;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    @media (max-width: 600px) {
+      animation-name: none;
+    }
+  }
+}

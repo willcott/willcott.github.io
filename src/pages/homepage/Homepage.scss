@@ -1,0 +1,84 @@
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding-bottom: 8px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid var(--primary);
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.titles {
+  padding-top: 20vh;
+  max-width: 100%;
+
+  @media (max-width: 600px) {
+    padding-top: 30vh;
+  }
+
+  .titles__main {
+    font-size: 4em;
+    color: var(--primary);
+    font-family: "Roboto Mono", monospace;
+    text-shadow: 2px 2px var(--secondary);
+
+    @media (max-width: 600px) {
+      font-size: 3em;
+    }
+    @media (max-width: 300px) {
+      font-size: 2em;
+    }
+  }
+
+  .titles__sub {
+    font-size: 2em;
+    color: var(--primary);
+    text-shadow: 2px 2px var(--secondary);
+    @media (max-width: 300px) {
+      font-size: 1em;
+    }
+  }
+}
+
+[data-aos="out"] {
+  opacity: 1;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}

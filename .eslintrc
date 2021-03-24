@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "plugins": ["jest"],
+  "parser": "babel-eslint",
+  "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-unused-state": "off"
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  }
+}
