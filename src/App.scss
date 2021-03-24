@@ -1,0 +1,57 @@
+.app {
+  --background: #1c1c1c;
+  --primary: #ffffff;
+  --secondary: #ff4545;
+  background-color: var(--background);
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+a {
+  transition: ease-in-out 0.5s;
+  display: flex;
+  align-items: bottom;
+  padding: 8px;
+  border: none;
+  margin: 8px;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  fill: inherit;
+
+  background-color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: inherit;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &.active {
+    text-decoration: underline;
+  }
+}
+
+.page-title {
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  font-size: 4em;
+  color: var(--primary);
+  font-family: "Roboto Mono", monospace;
+  text-shadow: 2px 2px var(--secondary);
+
+  @media (max-width: 300px) {
+    font-size: 2em;
+  }
+}
+
+.fullscreen-page {
+  min-height: 100vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}

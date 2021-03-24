@@ -1,0 +1,60 @@
+.cv__main {
+  padding: 0 10vw;
+  color: var(--secondary);
+
+  @media (max-width: 600px) {
+    padding: 0 2.5vw;
+  }
+
+  .cv__section {
+    margin-top: 20px;
+    background-color: #88cbfb;
+    padding: 20px;
+
+    @media (max-width: 600px) {
+      padding: 10px;
+    }
+    .cv__section-title {
+      padding: 20px;
+      font-size: 2.5em;
+      background-color: #ffffff;
+      box-shadow: 10px 10px;
+
+      @media (max-width: 600px) {
+        padding: 10px;
+        font-size: 1.5em;
+        box-shadow: none;
+      }
+    }
+    .cv__item {
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 10px 10px;
+
+      @media (max-width: 600px) {
+        padding: 10px;
+        margin: 0;
+        box-shadow: none;
+      }
+      .cv__item-title {
+        padding-top: 20px;
+        font-size: 2em;
+      }
+
+      .cv__role {
+        .cv__role-title {
+          padding-top: 20px;
+          font-size: 1.5em;
+        }
+        .cv__role-time {
+          padding-top: 10px;
+          font-weight: bold;
+        }
+        .cv__role-description {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
