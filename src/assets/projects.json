@@ -1,5 +1,12 @@
 [
   {
+    "title": "Guitar Tuner Google Action",
+    "id": "guitar_tuner_google_action",
+    "videoId": "i25VWX4fZ9Y",
+    "imageSrc": "https://i.imgur.com/RcpBxGY.png",
+    "body": "This is a Google Action that can be used for tuning a guitar written in JavaScript and for use with Dialogflow, a natural language understanding (NLU) platform from Google. This project was to help me to understand the use of NLUs in voice applications and how to build skills and actions for voice assistants. The code was then implemented as a Google Cloud Function in GCP.<br><br> This project gave me a greater understanding of entity extraction and intent resolution in practical voice applications. A demonstration video of the Google Action can be found below, and the code can be found here: <a href=\"https://github.com/willcott/tuner-google-action\">https://github.com/willcott/tuner-google-action</a>."
+  },
+  {
     "title": "Sound Design Project",
     "id": "sound_design",
     "imageSrc": "https://i.imgur.com/FpUNY9x.jpg",
