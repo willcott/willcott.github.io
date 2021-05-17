@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Contact from '../../components/contact/Contact';
 import ProjectList from '../../components/projectList/ProjectList';
@@ -23,6 +24,9 @@ export default () => (
     <div className="fullscreen-page project-section">
       <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="page-title">Projects</div>
       <ProjectList listLength={3} />
+      <NavLink to="/projects" type="button" className="more-button">
+        More Projects
+      </NavLink>
     </div>
     <div className="fullscreen-page">
       <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="page-title">Contact</div>
