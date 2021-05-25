@@ -18,8 +18,28 @@ export default () => (
           <div className="cv__item">
             <div className="cv__item-title">BBC</div>
             <div className="cv__role">
+              <div className="cv__role-title">
+                Software Engineer - BBC Sounds
+              </div>
+              <div className="cv__role-time">Mar 2021 – Present</div>
+              <div className="cv__role-description">
+                Android Engineer for the BBC Sounds mobile app, working
+                primarily in Kotlin.
+              </div>
+            </div>
+            <div className="cv__role">
               <div className="cv__role-title">Software Engineer - BBC R&D</div>
-              <div className="cv__role-time">Sep 2020 – Present</div>
+              <div className="cv__role-time">Sep 2020 – Mar 2021</div>
+              <div className="cv__role-description">
+                Developed user interfaces and APIs for internal machine learning
+                based tools for media production within a research context.
+                <br />
+                My work was demonstrated at the EBU Production Technology
+                Seminar 2021.
+                <br />
+                Technologies Used: JavaScript, Node.JS, React, Python,
+                TensorFlow, OpenCV
+              </div>
             </div>
             <div className="cv__role">
               <div className="cv__role-title">
