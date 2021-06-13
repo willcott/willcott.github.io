@@ -1,7 +1,7 @@
 .cv__main {
   padding: 0 10vw;
   margin-bottom: 5vh;
-  color: var(--secondary);
+  color: var(--primary);
 
   @media (max-width: 600px) {
     padding: 0 2.5vw;
@@ -9,7 +9,8 @@
 
   .cv__section {
     margin-top: 20px;
-    background-color: #88cbfb;
+    background-color: var(--container-backgroud);
+    border-radius: 25px;
     padding: 20px;
 
     @media (max-width: 600px) {
@@ -18,8 +19,7 @@
     .cv__section-title {
       padding: 20px;
       font-size: 2.5em;
-      background-color: #ffffff;
-      box-shadow: 10px 10px;
+
 
       @media (max-width: 600px) {
         padding: 10px;
@@ -28,10 +28,7 @@
       }
     }
     .cv__item {
-      margin: 20px;
       padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 10px 10px;
 
       @media (max-width: 600px) {
         padding: 10px;

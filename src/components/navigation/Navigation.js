@@ -18,7 +18,7 @@ function Navigation(props) {
   return (
     <>
       <SmallScreen>
-        <div className="navigation">
+        <div className="navigation mobile">
           <button type="button" onClick={() => setShowMobileNav(!showMobileNav)} style={{ textDecoration: 'none' }}>
             <i className="fa fa-bars" />
           </button>

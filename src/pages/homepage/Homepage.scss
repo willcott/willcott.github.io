@@ -1,6 +1,7 @@
 .arrow {
   position: absolute;
-  bottom: 0;
+  z-index: 10;
+  margin-top: 35vh;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -39,7 +40,7 @@
 }
 
 .titles {
-  padding-top: 20vh;
+  padding-top: 10vh;
   max-width: 100%;
 
   @media (max-width: 600px) {
@@ -47,7 +48,7 @@
   }
 
   .titles__main {
-    font-size: 4em;
+    font-size: 2em;
     color: var(--primary);
     font-family: "Roboto Mono", monospace;
     text-shadow: 2px 2px var(--secondary);
@@ -61,7 +62,7 @@
   }
 
   .titles__sub {
-    font-size: 2em;
+    font-size: 1em;
     color: var(--primary);
     text-shadow: 2px 2px var(--secondary);
     @media (max-width: 300px) {

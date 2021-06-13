@@ -2,6 +2,7 @@
   --background: #1c1c1c;
   --primary: #ffffff;
   --secondary: #ff4545;
+  --container-backgroud: #343434;
   background-color: var(--background);
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
@@ -9,7 +10,6 @@
 
 button,
 a {
-  transition: ease-in-out 0.5s;
   display: flex;
   align-items: bottom;
   padding: 8px;

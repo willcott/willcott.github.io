@@ -42,7 +42,7 @@ export default class Slideshow extends React.Component {
       <>
         <SmallScreen>
           <div className="mobile-slideshow">
-            <div>
+            <div className="image-container">
               {imageSources.map((source, index) => <img src={source} alt="ALT" className={index === currentIndex ? 'slideshow__visible' : 'slideshow__hidden'} key={source} />)}
             </div>
             <div className="mobile-slideshow__arrows">
@@ -54,7 +54,7 @@ export default class Slideshow extends React.Component {
         <LargeScreen>
           <div className="slideshow">
             <button onClick={this.onLeftClick} type="button" className="slideshow__arrow">{'<'}</button>
-            <div>
+            <div className="image-container">
               {imageSources.map((source, index) => <img src={source} alt="ALT" className={index === currentIndex ? 'slideshow__visible' : 'slideshow__hidden'} key={source} />)}
             </div>
             <button onClick={this.onRightClick} type="button" className="slideshow__arrow">{'>'}</button>

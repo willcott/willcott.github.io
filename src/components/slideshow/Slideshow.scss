@@ -1,19 +1,17 @@
 .slideshow {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 0 10%;
+  height: 100%;
 }
 
 .slideshow__arrow {
+  background-color: var(--background);
   font-size: 4em;
-  text-decoration: none;
-  color: #1C1C1C;
-  box-shadow: 10px 10px;
-  background-color: #88CBFB;
   margin: 0;
-  margin-left: -10px;
   z-index: 1;
+  border-radius: 10px;
+  transition: 0.2;
 
   &:focus {
     outline: none;
@@ -22,17 +20,27 @@
 
   &:hover {
     text-decoration: none;
+    box-shadow: 0px 5px var(--secondary);
+    transform: translate(0, -5px);
+  }
+}
+
+.image-container { 
+  height: 100%;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    margin:auto
   }
 }
 
 .slideshow__visible {
-  max-width: 100%;
-  transition: 1s;
+  border-radius: 25px;
 }
 
 .slideshow__hidden {
   display: none;
-  transition: 1s;
 }
 
 .mobile-slideshow {
