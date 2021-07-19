@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SmallScreen, LargeScreen } from '../utils/DeviceCheck';
+import Toast from '../toast/Toast';
 
 import './Contact.scss';
 
@@ -8,7 +9,7 @@ export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      emailText: 'Email',
+      showToast: false,
     };
   }
 
@@ -19,10 +20,9 @@ export default class Contact extends React.Component {
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
+    this.setState({ showToast: true });
 
-    this.setState({ emailText: 'Copied' });
-
-    setTimeout(() => { this.setState({ emailText: 'Email' }); }, 2000);
+    setTimeout(() => { this.setState({ showToast: false }); }, 3000);
   };
 
   openLink = (link) => {
@@ -38,21 +38,23 @@ export default class Contact extends React.Component {
   };
 
   render = () => {
-    const { emailText } = this.state;
+    const { showToast } = this.state;
+
     return (
       <>
         <SmallScreen>
+          <Toast message="Copied To Clipboard" show={showToast} />
           <div className="mobile-contacts-list" data-aos="zoom-in">
             <div
               className="contacts-list__contact"
               role="button"
-              onClick={(event) => this.handleClickOrEnter(event, () => this.copyText('william.h.cotingham@gmail.com'))}
-              onKeyDown={(event) => this.handleClickOrEnter(event, () => this.copyText('william.h.cotingham@gmail.com'))}
+              onClick={(event) => this.handleClickOrEnter(event, () => this.copyText('william.h.cottingham@gmail.com'))}
+              onKeyDown={(event) => this.handleClickOrEnter(event, () => this.copyText('william.h.cottingham@gmail.com'))}
               tabIndex={0}
             >
               <i className="fa fa-envelope" />
               <div className="contacts-list__contact-name">
-                {emailText}
+                Email
               </div>
             </div>
 
@@ -85,6 +87,7 @@ export default class Contact extends React.Component {
           </div>
         </SmallScreen>
         <LargeScreen>
+          <Toast message="Copied To Clipboard" show={showToast} />
           <div className="contacts-list">
             <div
               data-aos="zoom-in"
