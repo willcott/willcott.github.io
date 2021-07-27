@@ -22,6 +22,8 @@ export default class Slideshow extends React.Component {
     const { audioContext } = this.state;
 
     document.addEventListener('keydown', (event) => {
+      if (event.repeat) return;
+
       switch (event.key) {
         case 'a':
           this.onKeyPress(event, 261.63);
@@ -148,7 +150,7 @@ export default class Slideshow extends React.Component {
         canvasCtx.fillStyle = 'rgb(28,28,28)';
         canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-        canvasCtx.lineWidth = 2;
+        canvasCtx.lineWidth = 4;
         canvasCtx.strokeStyle = 'rgb(255,255,255)';
 
         canvasCtx.beginPath();
@@ -196,7 +198,9 @@ export default class Slideshow extends React.Component {
   onKeyPress = (event, frequency) => {
     const { audioContext, analyser } = this.state;
 
-    event.target.classList.add('pressed');
+    if (event.target.classList.contains('key')) {
+      event.target.classList.add('pressed');
+    }
 
     const oscillatorNode = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -225,7 +229,7 @@ export default class Slideshow extends React.Component {
 
   render = () => (
     <LargerThan500Screen>
-      <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+      <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="container">
         <div className="instructions">
           <div className="title">Interactive keyboard.</div>
           <div className="content">
@@ -260,5 +264,5 @@ export default class Slideshow extends React.Component {
         </div>
       </div>
     </LargerThan500Screen>
-  );
+  )
 }

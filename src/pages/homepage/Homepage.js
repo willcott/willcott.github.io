@@ -11,7 +11,7 @@ export default () => (
   <div
     className="homepage"
   >
-    <div className="fullscreen-page">
+    <div className="first-page">
       <div className="titles" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <div className="titles__main">
           Will Cottingham
