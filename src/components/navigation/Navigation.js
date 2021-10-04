@@ -33,11 +33,11 @@ function Navigation(props) {
             >
               <i className="fa fa-home" />
             </NavLink>
-            <NavLink to="/contact" activeClassName="active" type="button" onClick={() => setShowMobileNav(false)}>
-              Contact
-            </NavLink>
             <NavLink to="/projects" activeClassName="active" type="button" onClick={() => setShowMobileNav(false)}>
               Projects
+            </NavLink>
+            <NavLink to="/contact" activeClassName="active" type="button" onClick={() => setShowMobileNav(false)}>
+              Contact
             </NavLink>
             <NavLink to="/cv" activeClassName="active" type="button" onClick={() => setShowMobileNav(false)}>
               CV
@@ -56,17 +56,16 @@ function Navigation(props) {
           >
             <i className="fa fa-home" />
           </NavLink>
-          <NavLink to="/contact" activeClassName="active" type="button">
-            Contact
-          </NavLink>
           <NavLink to="/projects" activeClassName="active" type="button">
             Projects
+          </NavLink>
+          <NavLink to="/contact" activeClassName="active" type="button">
+            Contact
           </NavLink>
           <NavLink to="/cv" activeClassName="active" type="button">
             CV
           </NavLink>
         </div>
-
       </LargeScreen>
     </>
   );

@@ -14,6 +14,7 @@ import Projects from './pages/Projects';
 import Project from './pages/project/Project';
 import CV from './pages/cv/CV';
 import ScrollToTop from './components/utils/ScrollToTop';
+import KeyboardProject from './pages/project/KeyboardProject';
 
 AOS.init();
 
@@ -25,6 +26,7 @@ export default () => (
       <Switch>
         <Route path="/contact" component={Contact} />
         <Route path="/projects" component={Projects} />
+        <Route path="/project/interactive_keyboard" component={KeyboardProject} />
         <Route path="/project/:projectId" component={Project} />
         <Route path="/cv" component={CV} />
         <Route exact path="/" component={Homepage} />

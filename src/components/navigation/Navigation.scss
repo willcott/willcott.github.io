@@ -1,19 +1,12 @@
 .navigation {
   font-size: 2em;
-  color: #FFFFFF;
-  fill: #FFFFFF;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: fixed;
   z-index: 1;
-  background-color: #731DD8;
-  width: fit-content;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  background-color: var(--background);
+  width: 100vw;
   padding: 0 10px;
 
   @media (max-width: 600px) {

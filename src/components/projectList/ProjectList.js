@@ -15,19 +15,20 @@ const ProjectList = (props) => {
         .map((value, index) => (
           <Link
             to={`/project/${projects[index].id}`}
-            data-aos={index % 2 === 0 ? 'fade-up-left' : 'fade-up-right'}
-            data-aos-anchor-placement="bottom-bottom"
-            className={`project-list__project ${index % 2 === 0 ? 'offset-left' : 'offset-right'}`}
+            // data-aos="fade-up"
+            // data-aos-offset="-200"
+            // data-aos-anchor-placement="bottom-top"
+            className="project-list__project"
             key={projects[index].id}
           >
             <div className="project-list__project-contents">
-              {index % 2 === 0 && (
+              {/* {index % 2 === 0 && ( */}
               <div className="project-list__project-title">{projects[index].title}</div>
-              )}
+              {/* )} */}
               <img className="project-list__project-image" src={projects[index].imageSrc} alt={projects[index].title} />
-              {!(index % 2 === 0) && (
+              {/* {!(index % 2 === 0) && (
               <div className="project-list__project-title">{projects[index].title}</div>
-              )}
+              )} */}
             </div>
           </Link>
         ))}
