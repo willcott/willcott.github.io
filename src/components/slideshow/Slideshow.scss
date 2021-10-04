@@ -7,11 +7,13 @@
 
 .slideshow__arrow {
   background-color: var(--background);
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
   z-index: 1;
   border-radius: 10px;
   transition: 0.2;
+  font-family: 'Raleway', sans-serif;
+
 
   &:focus {
     outline: none;

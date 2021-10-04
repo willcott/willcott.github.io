@@ -46,18 +46,18 @@ export default class Slideshow extends React.Component {
               {imageSources.map((source, index) => <img src={source} alt="ALT" className={index === currentIndex ? 'slideshow__visible' : 'slideshow__hidden'} key={source} />)}
             </div>
             <div className="mobile-slideshow__arrows">
-              <button onClick={this.onLeftClick} type="button" className="slideshow__arrow">{'<'}</button>
-              <button onClick={this.onRightClick} type="button" className="slideshow__arrow">{'>'}</button>
+              <button onClick={this.onLeftClick} type="button" className="slideshow__arrow">&#10094;</button>
+              <button onClick={this.onRightClick} type="button" className="slideshow__arrow">&#10095;</button>
             </div>
           </div>
         </SmallScreen>
         <LargeScreen>
           <div className="slideshow">
-            <button onClick={this.onLeftClick} type="button" className="slideshow__arrow">{'<'}</button>
+            <button onClick={this.onLeftClick} type="button" className="slideshow__arrow">&#10094;</button>
             <div className="image-container">
               {imageSources.map((source, index) => <img src={source} alt="ALT" className={index === currentIndex ? 'slideshow__visible' : 'slideshow__hidden'} key={source} />)}
             </div>
-            <button onClick={this.onRightClick} type="button" className="slideshow__arrow">{'>'}</button>
+            <button onClick={this.onRightClick} type="button" className="slideshow__arrow">&#10095;</button>
           </div>
         </LargeScreen>
       </>

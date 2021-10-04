@@ -229,14 +229,13 @@ export default class Slideshow extends React.Component {
 
   render = () => (
     <LargerThan500Screen>
-      <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className="container">
+      <div className="container">
         <div className="instructions">
-          <div className="title">Interactive keyboard.</div>
           <div className="content">
             Use the keyboard or click on the keys to play.
             <br />
             <div className="small">
-              Made using the Web Audio API, more projects below.
+              Made using the Web Audio API.
             </div>
           </div>
         </div>

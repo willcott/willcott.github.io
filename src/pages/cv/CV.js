@@ -21,10 +21,22 @@ export default () => (
               <div className="cv__role-title">
                 Software Engineer - BBC Sounds
               </div>
-              <div className="cv__role-time">Mar 2021 – Present</div>
+              <div className="cv__role-time">Aug 2021 – Present</div>
               <div className="cv__role-description">
-                Android Engineer for the BBC Sounds mobile app, working
-                primarily in Kotlin.
+                Software Engineer for BBC Sounds Smart Speakers.
+                Developing Software for the BBC Sounds Alexa skill using Node.js,
+                TypeScript and AWS Lambda.
+              </div>
+            </div>
+            <div className="cv__role">
+              <div className="cv__role-title">
+                Software Engineer - BBC Sounds
+              </div>
+              <div className="cv__role-time">Mar 2021 – Aug 2021</div>
+              <div className="cv__role-description">
+                Software Engineer for BBC Sounds Mobile Team.
+                Worked on the Android and Android Automotive BBC Sounds applications using Kotlin.
+                Developed for the BBC Sounds iOS app using Swift.
               </div>
             </div>
             <div className="cv__role">

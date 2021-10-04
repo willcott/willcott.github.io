@@ -1,15 +1,17 @@
 .app {
-  --background: #1c1c1c;
-  --primary: #ffffff;
-  --secondary: #ff4545;
-  --container-backgroud: #343434;
+  --background: #ffffff;
+  --primary: #000000;
+  --secondary: #FF5349;
+  --container-backgroud: #c5c5c5;
   background-color: var(--background);
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
 }
 
 button,
 a {
+  font-family: 'Raleway', sans-serif;
   display: flex;
   align-items: bottom;
   padding: 8px;
@@ -20,20 +22,21 @@ a {
   text-decoration: none;
   color: inherit;
   fill: inherit;
-
   background-color: inherit;
 
   &:hover {
     text-decoration: underline;
-    text-decoration-color: inherit;
+    text-decoration-color: var(--secondary);
   }
 
   &:focus {
     text-decoration: underline;
+    text-decoration-color: var(--secondary);
   }
 
   &.active {
     text-decoration: underline;
+    text-decoration-color: var(--secondary);
   }
 }
 
@@ -42,8 +45,7 @@ a {
   padding-bottom: 10vh;
   font-size: 4em;
   color: var(--primary);
-  font-family: "Roboto Mono", monospace;
-  text-shadow: 2px 2px var(--secondary);
+  font-family: 'Fredoka One', cursive;
 
   @media (max-width: 300px) {
     font-size: 2em;
@@ -52,6 +54,6 @@ a {
 
 .fullscreen-page {
   min-height: 100vh;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
