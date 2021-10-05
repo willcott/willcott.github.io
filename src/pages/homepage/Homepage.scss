@@ -5,7 +5,7 @@
 }
 
 // .top-page {
-  // height: 100vh;
+// height: 100vh;
 // }
 
 .contents {
@@ -38,6 +38,7 @@
   padding: 20px;
   transform-origin: center left;
   transition: 0.2s;
+  width: fit-content;
 }
 
 .one {
@@ -71,6 +72,7 @@
   justify-content: space-evenly;
   margin-top: -10vh;
   z-index: 5;
+  width: auto;
 }
 
 .project-title {

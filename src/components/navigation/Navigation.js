@@ -48,23 +48,29 @@ function Navigation(props) {
       </SmallScreen>
       <LargeScreen>
         <div className="navigation">
-          <NavLink
-            to="/"
-            activeClassName="active"
-            isActive={checkHomeLinkIsActive}
-            type="button"
-          >
-            <i className="fa fa-home" />
-          </NavLink>
-          <NavLink to="/projects" activeClassName="active" type="button">
-            Projects
-          </NavLink>
-          <NavLink to="/contact" activeClassName="active" type="button">
-            Contact
-          </NavLink>
-          <NavLink to="/cv" activeClassName="active" type="button">
-            CV
-          </NavLink>
+          <div className="links">
+            <NavLink
+              to="/"
+              activeClassName="active"
+              isActive={checkHomeLinkIsActive}
+              type="button"
+            >
+              <i className="fa fa-home" />
+            </NavLink>
+            <NavLink to="/projects" activeClassName="active" type="button">
+              Projects
+            </NavLink>
+            <NavLink to="/contact" activeClassName="active" type="button">
+              Contact
+            </NavLink>
+            <NavLink to="/cv" activeClassName="active" type="button">
+              CV
+            </NavLink>
+          </div>
+          <div className="right-section">
+            MANCHESTER - UK
+            <i className="fa fa-map-pin" />
+          </div>
         </div>
       </LargeScreen>
     </>

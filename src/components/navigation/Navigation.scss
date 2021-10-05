@@ -1,16 +1,49 @@
 .navigation {
-  font-size: 2em;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--background);
+
   position: fixed;
   z-index: 1;
-  background-color: var(--background);
-  width: 100vw;
-  padding: 0 10px;
 
-  @media (max-width: 600px) {
-    flex-direction: column;
+  width: 100vw;
+
+  .links {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  .right-section {
+    color: var(--primary);
+    padding-right: 10px;
+    margin-right: 10px;
+    position: relative;
+
+    i {
+      transform: translateY(-100px);
+      position: absolute;
+
+      left: 50%;
+      top: -1em;
+
+      transition: 0.2s;
+      transition-timing-function: cubic-bezier(1, 0, 0.5, 1.35);
+      padding-bottom: 1em;
+    }
+
+    &:hover {
+      i {
+        transform: translateY(0);
+      }
+    }
   }
 }
 

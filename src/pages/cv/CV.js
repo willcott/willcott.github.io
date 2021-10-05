@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './CV.scss';
 
 export default () => (
   <>
+    <Helmet>
+      <title>CV - Will Cottingham</title>
+    </Helmet>
     <div className="fullscreen-page">
       <div
         data-aos="fade-up"
