@@ -2,6 +2,7 @@
   --background: #ffffff;
   --primary: #000000;
   --secondary: #FF5349;
+  --tertiary: #50b6ff;
   --container-backgroud: #c5c5c5;
   background-color: var(--background);
   overflow-x: hidden;
@@ -46,7 +47,7 @@ a {
   padding-bottom: 10vh;
   font-size: 4em;
   color: var(--primary);
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Fredoka One', sans-serif;
 
   @media (max-width: 300px) {
     font-size: 2em;

@@ -23,7 +23,8 @@
     "react-helmet": "^6.1.0",
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "vanilla-tilt": "^1.7.2"
   },
   "scripts": {
     "predeploy": "npm run build",
