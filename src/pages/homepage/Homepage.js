@@ -57,7 +57,7 @@ export default class Homepage extends React.Component {
     return (
       <>
         <Helmet>
-          <title>Will Cottingham</title>
+          <title>{match.path === '/contact' ? 'Contact - Will Cottingham' : 'Will Cottingham'}</title>
         </Helmet>
         <div
           className="homepage"
