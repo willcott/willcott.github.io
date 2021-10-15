@@ -14,7 +14,7 @@
     width: 60%;
     max-height: 20vh;
     transition: 0.2s;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
 
     &:hover {
@@ -43,7 +43,6 @@
 
       @media (max-width: 900px) {
         // margin: 0px 20px;s
-
       }
       @media (max-width: 600px) {
         font-size: 1em;
@@ -84,7 +83,6 @@
           margin: 20px;
           margin-top: 10px;
           max-height: 30vh;
-
         }
       }
     }
@@ -97,4 +95,25 @@
   .offset-right {
     margin-right: 20%;
   }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+  animation: shine 2s infinite;
+}
+@keyframes shine {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.lazyloaded {
+  transition: 0.2s ease-in;
 }

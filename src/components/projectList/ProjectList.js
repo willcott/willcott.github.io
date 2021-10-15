@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import 'lazysizes';
 
 import projects from '../../assets/projects.json';
 
@@ -25,7 +26,7 @@ const ProjectList = (props) => {
               {/* {index % 2 === 0 && ( */}
               <div className="project-list__project-title">{projects[index].title}</div>
               {/* )} */}
-              <img className="project-list__project-image" src={projects[index].imageSrc} alt={projects[index].title} />
+              <img className="project-list__project-image lazyload" data-src={projects[index].imageSrc} alt={projects[index].title} src="/placeholder.png" />
               {/* {!(index % 2 === 0) && (
               <div className="project-list__project-title">{projects[index].title}</div>
               )} */}
