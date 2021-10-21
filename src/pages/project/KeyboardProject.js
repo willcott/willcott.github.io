@@ -23,17 +23,18 @@ const Project = () => {
     videoId,
     audioUrl,
     slideshowImgs,
+    tags,
   } = project;
 
   return (
     <>
       <Helmet>
         <title>{`${title} - Will Cottingham`}</title>
+        <meta name="keywords" content={tags.join(', ')} />
       </Helmet>
 
       <div className="project">
         <div className="project__title">{title}</div>
-
         <div className="project__main">
           <div className="project__body">
             {/* eslint-disable-next-line react/no-danger */}
@@ -41,7 +42,6 @@ const Project = () => {
             {showImage && <img className="project__image" src={imageSrc} alt={`${title}`} />}
           </div>
           <Waveform />
-
           {videoId
       && (
       <div className="project__video">

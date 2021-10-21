@@ -22,12 +22,14 @@ const Project = (props) => {
     videoId,
     audioUrl,
     slideshowImgs,
+    tags,
   } = project;
 
   return (
     <>
       <Helmet>
         <title>{`${title} - Will Cottingham`}</title>
+        <meta name="keywords" content={tags.join(', ')} />
       </Helmet>
       <div className="project">
         <div className="project__title">{title}</div>

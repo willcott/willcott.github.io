@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import 'lazysizes';
 
 import projects from '../../assets/projects.json';
+import tagmap from '../../assets/tagmap.json';
 
 import './ProjectList.scss';
 
@@ -23,9 +24,19 @@ const ProjectList = (props) => {
             key={projects[index].id}
           >
             <div className="project-list__project-contents">
-              {/* {index % 2 === 0 && ( */}
-              <div className="project-list__project-title">{projects[index].title}</div>
-              {/* )} */}
+              <div className="project-list__project-right">
+                <div className="project-list__project-title underline">{projects[index].title}</div>
+                <div className="project-list__project-tags">
+                  {Array(projects[index].tags.length)
+                    .fill()
+                    .map((_, tagIndex) => (
+                      <div className="tag-bubble">
+                        <i className={tagmap[projects[index].tags[tagIndex]]} />
+                        {projects[index].tags[tagIndex]}
+                      </div>
+                    ))}
+                </div>
+              </div>
               <img className="project-list__project-image lazyload" data-src={projects[index].imageSrc} alt={projects[index].title} src="/placeholder.png" />
               {/* {!(index % 2 === 0) && (
               <div className="project-list__project-title">{projects[index].title}</div>

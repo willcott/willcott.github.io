@@ -119,7 +119,7 @@ export default class Homepage extends React.Component {
             Projects
           </div>
           <ProjectList listLength={3} />
-          <NavLink to="/projects" type="button" className="more-button">
+          <NavLink to="/projects" type="button" className="more-button underline">
             More Projects
           </NavLink>
           <div className="page-title project-title" ref={this.contactRef}>
