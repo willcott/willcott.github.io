@@ -32,12 +32,12 @@ const Project = (props) => {
         <meta name="keywords" content={tags.join(', ')} />
       </Helmet>
       <div className="project">
-        <div className="project__title">{title}</div>
+        <h1 className="project__title">{title}</h1>
 
         <div className="project__main">
           <div className="project__body">
             {/* eslint-disable-next-line react/no-danger */}
-            <div className="project__body-text" dangerouslySetInnerHTML={{ __html: body }} />
+            <p className="project__body-text" dangerouslySetInnerHTML={{ __html: body }} />
             {showImage && <img className="project__image" src={imageSrc} alt={`${title}`} />}
           </div>
 

@@ -57,7 +57,7 @@ export default class Homepage extends React.Component {
     return (
       <>
         <Helmet>
-          <title>{match.path === '/contact' ? 'Contact - Will Cottingham' : 'Will Cottingham'}</title>
+          <title>{match.path === '/contact' ? 'Contact - Will Cottingham' : 'Will Cottingham - Software Development, Sound Design, and Audio Production'}</title>
         </Helmet>
         <div
           className="homepage"
@@ -68,15 +68,15 @@ export default class Homepage extends React.Component {
                 <i className="fa fa-bullhorn" />
               </div>
               <div className="lines">
-                <div className={`line one ${loaded || 'loading'}`}>
+                <h1 className={`line one ${loaded || 'loading'}`}>
                   Hello, I'm Will
-                </div>
-                <div className="line two">
+                </h1>
+                <h1 className="line two">
                   A Software Engineer living in Manchester, UK.
-                </div>
-                <div className="line three">
+                </h1>
+                <h1 className="line three">
                   What would you like to hear more about?
-                </div>
+                </h1>
               </div>
             </div>
             <div className="line four">
@@ -96,10 +96,10 @@ export default class Homepage extends React.Component {
 
           <div className="about-paragraph" ref={this.aboutRef}>
             <Tilt className="about-paragraph__section" style={{ alignSelf: 'start' }}>
-              <div className="about-paragraph__main">
+              <p className="about-paragraph__main">
                 This is a place to hold and display some of the different projects I've worked
                 on over time.
-              </div>
+              </p>
             </Tilt>
             <Tilt className="about-paragraph__section" style={{ alignSelf: 'end' }}>
               I currently work day to day on smart speaker applications for BBC Sounds, but I
@@ -115,16 +115,16 @@ export default class Homepage extends React.Component {
             </Tilt>
           </div>
 
-          <div className="project-title">
+          <h2 className="project-title">
             Projects
-          </div>
+          </h2>
           <ProjectList listLength={3} />
           <NavLink to="/projects" type="button" className="more-button underline">
             More Projects
           </NavLink>
-          <div className="page-title project-title" ref={this.contactRef}>
+          <h2 className="page-title project-title" ref={this.contactRef}>
             Get in contact
-          </div>
+          </h2>
           <Contact match={match} />
         </div>
       </>

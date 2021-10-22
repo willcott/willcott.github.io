@@ -13,9 +13,9 @@ const Tilt = (props) => {
   }, [options]);
 
   return (
-    <div ref={tilt} className={className} style={style}>
+    <p ref={tilt} className={className} style={style}>
       {children}
-    </div>
+    </p>
   );
 };
 

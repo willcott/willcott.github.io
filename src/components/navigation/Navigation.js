@@ -54,6 +54,7 @@ function Navigation(props) {
               activeClassName="active"
               isActive={checkHomeLinkIsActive}
               type="button"
+              aria-label="home"
             >
               <i className="fa fa-home" />
             </NavLink>
