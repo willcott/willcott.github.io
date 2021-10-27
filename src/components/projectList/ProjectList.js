@@ -22,6 +22,8 @@ const ProjectList = (props) => {
             // data-aos-anchor-placement="bottom-top"
             className="project-list__project"
             key={projects[index].id}
+            data-aos="zoom-in"
+            data-aos-anchor-placement="top-bottom"
           >
             <div className="project-list__project-contents">
               <div className="project-list__project-right">

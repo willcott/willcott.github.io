@@ -13,9 +13,10 @@ const Tilt = (props) => {
   }, [options]);
 
   return (
-    <p ref={tilt} className={className} style={style}>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <div ref={tilt} className={className} style={style} {...props}>
       {children}
-    </p>
+    </div>
   );
 };
 
