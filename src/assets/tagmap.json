@@ -1,0 +1,12 @@
+{
+  "html": "fab fa-html5",
+  "css": "fab fa-css3-alt",
+  "javascript": "fab fa-js-square",
+  "audio": "fas fa-volume-up",
+  "iOS": "fab fa-apple",
+  "AR/VR": "fas fa-vr-cardboard",
+  "video": "fas fa-video",
+  "swift": "fab fa-swift",
+  "android": "fab fa-android",
+  "music": "fas fa-music"
+}

@@ -12,14 +12,10 @@
   .project-list__project {
     text-decoration-color: var(--secondary);
     width: 60%;
-    max-height: 20vh;
+    max-height: 25vh;
     transition: 0.2s;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
-
-    &:hover {
-      max-height: 25vh;
-    }
 
     @media (max-width: 900px) {
       width: 100%;
@@ -40,16 +36,23 @@
       justify-content: space-between;
       transition: 0.2s;
       margin: 20px;
+      transition: 0.2s;
 
       @media (max-width: 900px) {
         // margin: 0px 20px;s
-
       }
       @media (max-width: 600px) {
         font-size: 1em;
         margin: 10px;
         flex-direction: column;
         justify-content: center;
+      }
+
+      .project-list__project-right {
+        width: 50%;
+        @media (max-width: 600px) {
+          width: 100%;
+        }
       }
 
       .project-list__project-title {
@@ -59,16 +62,24 @@
         color: var(--primary);
         mix-blend-mode: darken;
         margin-right: 40px;
+        text-decoration-color: var(--secondary);
 
         @media (max-width: 900px) {
-          text-align: center;
+          // text-align: center;
           margin-right: 0;
           font-size: 1.5em;
+        }
+        @media (max-width: 600px) {
+          text-align: center;
         }
 
         @media (max-width: 300px) {
           font-size: 1em;
         }
+      }
+
+      .project-list__project-image-container {
+        height: 20vh;
       }
 
       .project-list__project-image {
@@ -78,14 +89,8 @@
         background-color: #88cbfb;
         // margin: 20px;
         border-radius: 25px;
-        margin-left: 40px;
-
-        @media (max-width: 600px) {
-          margin: 20px;
-          margin-top: 10px;
-          max-height: 30vh;
-
-        }
+        margin: auto;
+        box-sizing:border-box;
       }
     }
   }
@@ -96,5 +101,55 @@
 
   .offset-right {
     margin-right: 20%;
+  }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+  animation: shine 2s infinite;
+}
+@keyframes shine {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.lazyloaded {
+  transition: 0.2s ease-in;
+}
+
+.tag-bubble {
+  background-color: var(--container-background);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.project-list__project-tags {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  max-width: 410px;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
   }
 }

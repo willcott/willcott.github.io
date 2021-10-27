@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import Slideshow from '../../components/slideshow/Slideshow';
 
@@ -21,20 +22,26 @@ const Project = (props) => {
     videoId,
     audioUrl,
     slideshowImgs,
+    tags,
   } = project;
 
   return (
-    <div className="project">
-      <div className="project__title">{title}</div>
+    <>
+      <Helmet>
+        <title>{`${title} - Will Cottingham`}</title>
+        <meta name="keywords" content={tags.join(', ')} />
+      </Helmet>
+      <div className="project">
+        <h1 className="project__title">{title}</h1>
 
-      <div className="project__main">
-        <div className="project__body">
-          {/* eslint-disable-next-line react/no-danger */}
-          <div className="project__body-text" dangerouslySetInnerHTML={{ __html: body }} />
-          {showImage && <img className="project__image" src={imageSrc} alt={`${title}`} />}
-        </div>
+        <div className="project__main">
+          <div className="project__body">
+            {/* eslint-disable-next-line react/no-danger */}
+            <p className="project__body-text" dangerouslySetInnerHTML={{ __html: body }} />
+            {showImage && <img className="project__image" src={imageSrc} alt={`${title}`} />}
+          </div>
 
-        {videoId
+          {videoId
       && (
       <div className="project__video">
         <iframe
@@ -46,7 +53,7 @@ const Project = (props) => {
         />
       </div>
       )}
-        {audioUrl
+          {audioUrl
       && (
       <iframe
         title="Audio Player"
@@ -58,10 +65,11 @@ const Project = (props) => {
         src={audioUrl}
       />
       )}
-        {slideshowImgs && <div className="project__slideshow"><Slideshow imageSources={slideshowImgs} /></div>}
-      </div>
+          {slideshowImgs && <div className="project__slideshow"><Slideshow imageSources={slideshowImgs} /></div>}
+        </div>
 
-    </div>
+      </div>
+    </>
   );
 };
 

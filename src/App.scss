@@ -1,17 +1,19 @@
 .app {
   --background: #ffffff;
   --primary: #000000;
-  --secondary: #FF5349;
-  --container-backgroud: #c5c5c5;
+  --secondary: #ff5349;
+  --tertiary: #0095ff;
+  --container-background: #c5c5c5;
   background-color: var(--background);
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   min-height: 100vh;
+  color: var(--primary);
 }
 
 button,
 a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   align-items: bottom;
   padding: 8px;
@@ -23,10 +25,13 @@ a {
   color: inherit;
   fill: inherit;
   background-color: inherit;
+  text-decoration-color: var(--secondary);
 
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--secondary);
+    .underline {
+      text-decoration: underline;
+      text-decoration-color: var(--secondary);
+    }
   }
 
   &:focus {
@@ -40,12 +45,19 @@ a {
   }
 }
 
+.underline:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+
 .page-title {
   padding-top: 15vh;
   padding-bottom: 10vh;
   font-size: 4em;
   color: var(--primary);
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", sans-serif;
+
+  
 
   @media (max-width: 300px) {
     font-size: 2em;
@@ -56,4 +68,20 @@ a {
   min-height: 100vh;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+h1 {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
