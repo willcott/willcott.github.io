@@ -37,7 +37,9 @@ const ProjectList = (props) => {
                     ))}
                 </div>
               </div>
-              <img className="project-list__project-image lazyload" data-src={projects[index].imageSrc} alt={projects[index].title} src="/placeholder.png" />
+              <div className="project-list__project-image-container">
+                <img className="project-list__project-image lazyload" data-src={projects[index].imageSrc} alt={projects[index].title} src="/placeholder.png" />
+              </div>
               {/* {!(index % 2 === 0) && (
               <div className="project-list__project-title">{projects[index].title}</div>
               )} */}

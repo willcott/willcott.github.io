@@ -80,13 +80,13 @@ export default class Homepage extends React.Component {
               </div>
             </div>
             <div className="line four">
-              <button type="button" className="home-button" onClick={this.onAboutClick}>
+              <button type="button" className="home-button underline" onClick={this.onAboutClick}>
                 About
               </button>
-              <NavLink to="/projects" type="button" className="home-button">
+              <NavLink to="/projects" type="button" className="home-button underline">
                 Projects
               </NavLink>
-              <NavLink to="/cv" type="button" className="home-button">
+              <NavLink to="/cv" type="button" className="home-button underline">
                 Experience
               </NavLink>
             </div>

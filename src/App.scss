@@ -25,6 +25,7 @@ a {
   color: inherit;
   fill: inherit;
   background-color: inherit;
+  text-decoration-color: var(--secondary);
 
   &:hover {
     .underline {
