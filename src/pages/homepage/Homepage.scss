@@ -21,7 +21,6 @@
 .megaphone {
   font-size: 40vmin;
   transition: 0.2s;
-  color: var(--primary-light);
 
   &:hover {
     transform: scale(1.1)!important;
@@ -45,8 +44,6 @@
 .one {
   transform: rotate(350deg);
   font-size: 10vmin;
-  font-family: "Fredoka One", cursive;
-  color: var(--primary-light);
   font-family: "Fredoka One", sans-serif;
   background-position: center;
   background-size: 0%;
