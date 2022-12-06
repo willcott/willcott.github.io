@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import 'lazysizes';
 
 import projects from '../../assets/projects.json';
+import tagmap from '../../assets/tagmap.json';
 
 import './ProjectList.scss';
 
@@ -20,12 +22,26 @@ const ProjectList = (props) => {
             // data-aos-anchor-placement="bottom-top"
             className="project-list__project"
             key={projects[index].id}
+            data-aos="zoom-in"
+            data-aos-anchor-placement="top-bottom"
           >
             <div className="project-list__project-contents">
-              {/* {index % 2 === 0 && ( */}
-              <div className="project-list__project-title">{projects[index].title}</div>
-              {/* )} */}
-              <img className="project-list__project-image" src={projects[index].imageSrc} alt={projects[index].title} />
+              <div className="project-list__project-right">
+                <div className="project-list__project-title underline">{projects[index].title}</div>
+                <div className="project-list__project-tags">
+                  {Array(projects[index].tags.length)
+                    .fill()
+                    .map((_, tagIndex) => (
+                      <div className="tag-bubble">
+                        <i className={tagmap[projects[index].tags[tagIndex]]} />
+                        {projects[index].tags[tagIndex]}
+                      </div>
+                    ))}
+                </div>
+              </div>
+              <div className="project-list__project-image-container">
+                <img className="project-list__project-image lazyload" data-src={projects[index].imageSrc} alt={projects[index].title} src="/placeholder.png" />
+              </div>
               {/* {!(index % 2 === 0) && (
               <div className="project-list__project-title">{projects[index].title}</div>
               )} */}

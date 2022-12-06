@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 import Navigation from './components/navigation/Navigation';
 
 import Homepage from './pages/homepage/Homepage';
-import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Project from './pages/project/Project';
 import CV from './pages/cv/CV';
@@ -24,11 +23,11 @@ export default () => (
       <ScrollToTop />
       <Navigation />
       <Switch>
-        <Route path="/contact" component={Contact} />
         <Route path="/projects" component={Projects} />
         <Route path="/project/interactive_keyboard" component={KeyboardProject} />
         <Route path="/project/:projectId" component={Project} />
         <Route path="/cv" component={CV} />
+        <Route path="/contact" component={Homepage} />
         <Route exact path="/" component={Homepage} />
         {/* <Route component={404} /> */}
       </Switch>

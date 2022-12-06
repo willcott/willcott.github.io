@@ -90,7 +90,7 @@ export default class Contact extends React.Component {
           <Toast message="Copied To Clipboard" show={showToast} />
           <div className="contacts-list">
             <div
-              // data-aos="zoom-in"
+              data-aos="zoom-in"
               className="contacts-list__contact"
               role="button"
               onClick={(event) => this.handleClickOrEnter(event, () => this.copyText('william.h.cotingham@gmail.com'))}
@@ -106,7 +106,7 @@ export default class Contact extends React.Component {
             </div>
 
             <div
-              // data-aos="zoom-in"
+              data-aos="zoom-in"
               className="contacts-list__contact"
               role="button"
               onClick={(event) => this.handleClickOrEnter(event, () => this.openLink('https://github.com/willcott'))}

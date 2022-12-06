@@ -5,7 +5,7 @@
 }
 
 // .top-page {
-  // height: 100vh;
+// height: 100vh;
 // }
 
 .contents {
@@ -24,7 +24,7 @@
   color: var(--primary-light);
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)!important;
   }
 }
 
@@ -39,6 +39,7 @@
   padding: 20px;
   transform-origin: center left;
   transition: 0.2s;
+  width: fit-content;
 }
 
 .one {
@@ -46,9 +47,68 @@
   font-size: 10vmin;
   font-family: "Fredoka One", cursive;
   color: var(--primary-light);
+  font-family: "Fredoka One", sans-serif;
+  background-position: center;
+  background-size: 0%;
+  background-color: var(--primary);
+
+  background-repeat: no-repeat;
+  background-clip: text;
+  mix-blend-mode: darken;
+  color: transparent;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-name: unfill;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
 
   &:hover {
-    transform: rotate(350deg) scale(1.1);
+    animation-name: fill;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    transform: scale(1.1) rotate(350deg);
+  }
+}
+
+.loading {
+  animation-duration: 0s;
+}
+
+@keyframes fill {
+  0% {
+    background-size: 0%;
+    background-image: radial-gradient(
+      circle,
+      var(--secondary) 100%,
+      var(--primary) 100%
+    );
+  }
+  100% {
+    background-size: 100%;
+    background-image: radial-gradient(
+      circle,
+      var(--secondary) 100%,
+      var(--primary) 100%
+    );
+  }
+}
+
+@keyframes unfill {
+  100% {
+    background-size: 0%;
+    background-image: radial-gradient(
+      circle,
+      var(--secondary) 100%,
+      var(--primary) 100%
+    );
+  }
+  0% {
+    background-size: 100%;
+    background-image: radial-gradient(
+      circle,
+      var(--secondary) 100%,
+      var(--primary) 100%
+    );
   }
 }
 
@@ -72,11 +132,26 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: -10vh;
-  z-index: 5;
+  width: auto;
 }
 
 .project-title {
   margin-left: 20vw;
+  padding-bottom: 10vh;
+  font-size: 4em;
+  color: var(--primary);
+  font-family: "Fredoka One", cursive;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 2em;
+  }
 }
 
 .more-button {
@@ -91,25 +166,50 @@
   color: var(--tertiary);
   padding: 10px;
   transition: 0.2s;
-  z-index: 99;
-
+  z-index: 1;
   &:hover {
     transform: scale(1.1);
   }
 }
 
+.inline {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
 .about-paragraph {
-  border-radius: 25px;
-  border: 1px solid var(--tertiary);
-  color: var(--tertiary);
+  color: var(--primary);
   margin: auto;
-  padding: 10px;
-  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  width: 80vw;
   margin-bottom: 80px;
-  font-size: 2em;
 
   @media (max-width: 600px) {
-    width: 80vw;
+    width: 100vw;
+  }
+
+  .about-paragraph__section {
+    border-radius: 25px;
+    border: 1px solid var(--primary);
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+    font-size: 1.5em;
+    transition: 0.2s;
+
+    // &:hover{
+    //   transform: scale(1.1);
+    //   border: 5px dotted var(--secondary);
+
+    // }
+  }
+
+  .about-paragraph__main {
+    font-size: 1.5em;
   }
 }
 
@@ -157,5 +257,13 @@
   }
   100% {
     transform: scale(1, 1) translateY(0);
+  }
+}
+
+[data-aos="Out"] {
+  opacity: 1;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 0;
   }
 }
