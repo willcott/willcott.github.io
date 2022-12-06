@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--background);
+  color: var(--primary-light);
 
   position: fixed;
   z-index: 2;
@@ -22,7 +23,7 @@
   }
 
   .right-section {
-    color: var(--primary);
+    color: var(--primary-light);
     padding-right: 10px;
     margin-right: 10px;
     position: relative;
