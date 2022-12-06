@@ -1,9 +1,12 @@
 .app {
-  --background: #ffffff;
-  --primary: #000000;
+  --background: #000000;
+  --primary: #b8b8b8;
   --secondary: #FF5349;
-  --container-backgroud: #c5c5c5;
+  --tertiary: #50b6ff;
+  --container-backgroud: #3e3e3e;
+  --primary-light: #d9d9d9;
   background-color: var(--background);
+  color: var(--primary);
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
   min-height: 100vh;

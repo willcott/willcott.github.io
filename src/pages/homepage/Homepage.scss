@@ -21,6 +21,7 @@
 .megaphone {
   font-size: 40vmin;
   transition: 0.2s;
+  color: var(--primary-light);
 
   &:hover {
     transform: scale(1.1);
@@ -44,6 +45,7 @@
   transform: rotate(350deg);
   font-size: 10vmin;
   font-family: "Fredoka One", cursive;
+  color: var(--primary-light);
 
   &:hover {
     transform: rotate(350deg) scale(1.1);
@@ -85,8 +87,8 @@
 
 .home-button {
   border-radius: 25px;
-  border: 1px solid #50b6ff;
-  color: #50b6ff;
+  border: 1px solid var(--tertiary);
+  color: var(--tertiary);
   padding: 10px;
   transition: 0.2s;
   z-index: 99;
@@ -98,8 +100,8 @@
 
 .about-paragraph {
   border-radius: 25px;
-  border: 1px solid #50b6ff;
-  color: #50b6ff;
+  border: 1px solid var(--tertiary);
+  color: var(--tertiary);
   margin: auto;
   padding: 10px;
   width: 60vw;
